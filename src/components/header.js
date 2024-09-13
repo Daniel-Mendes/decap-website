@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
     width: 100%;
     z-index: ${theme.zIndexes.header};
 
-    ${p =>
+    ${(p) =>
       !p.collapsed &&
       css`
         // padding-top: ${theme.space[5]};
@@ -87,7 +87,7 @@ const MenuBtn = styled.button`
 const SearchBtn = styled(MenuBtn)``;
 
 const ToggleArea = styled.div`
-  display: ${p => (p.open ? 'block' : 'none')};
+  display: ${(p) => (p.open ? 'block' : 'none')};
   position: absolute;
   top: ${theme.space[6]};
   left: 0;
@@ -130,7 +130,7 @@ const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${theme.space[3]};
-  align-items: flex-end;
+  align-items: flex-start;
 
   ${mq[1]} {
     flex-direction: row;
@@ -162,6 +162,61 @@ const MenuItem = styled.li`
   }
 `;
 
+const MenuDetails = styled.details`
+  position: relative;
+
+  & > summary {
+    cursor: pointer;
+    line-height: 1;
+    font-weight: 400;
+
+    ${mq[2]} {
+      font-size: ${theme.fontsize[4]};
+    }
+  }
+
+  &[open] > ${MenuList} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    ${mq[1]} {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+
+      background-color: ${theme.colors.white};
+      border: 2px solid ${theme.colors.primaryLight};
+      border-radius: ${theme.radii[1]};
+
+      padding: 4px;
+    }
+
+    & > ${MenuItem} {
+      color: ${theme.colors.text};
+
+      ${mq[1]} {
+        color: ${theme.colors.gray};
+      }
+
+      width: 100%;
+
+      & > a {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+      }
+    }
+
+    & > ${MenuItem}:hover {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.primaryLight};
+      border-radius: ${theme.radii[1]};
+    }
+  }
+`;
+
 function Header({ hasHeroBelow }) {
   const [scrolled, setScrolled] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
@@ -177,7 +232,8 @@ function Header({ hasHeroBelow }) {
   }, []);
 
   function handleScroll() {
-    const currentWindowPos = document.documentElement.scrollTop || document.body.scrollTop;
+    const currentWindowPos =
+      document.documentElement.scrollTop || document.body.scrollTop;
 
     const scrolled = currentWindowPos > 0;
 
@@ -185,12 +241,12 @@ function Header({ hasHeroBelow }) {
   }
 
   function handleMenuBtnClick() {
-    setNavOpen(s => !s);
+    setNavOpen((s) => !s);
     setSearchOpen(false);
   }
 
   function handleSearchBtnClick() {
-    setSearchOpen(s => !s);
+    setSearchOpen((s) => !s);
     setNavOpen(false);
   }
 
@@ -204,7 +260,11 @@ function Header({ hasHeroBelow }) {
         </Logo>
         <MenuActions>
           <SearchBtn onClick={handleSearchBtnClick}>
-            {isSearchOpen ? <span>&times;</span> : <img src={searchIcon} alt="search" />}
+            {isSearchOpen ? (
+              <span>&times;</span>
+            ) : (
+              <img src={searchIcon} alt="search" />
+            )}
           </SearchBtn>
           <MenuBtn onClick={handleMenuBtnClick}>
             {isNavOpen ? <span>&times;</span> : <span>&#9776;</span>}
@@ -219,18 +279,49 @@ function Header({ hasHeroBelow }) {
               <Link to="/docs/intro/">Docs</Link>
             </MenuItem>
             <MenuItem>
-              <Link to="/services/" className="ga-menu">Pro Help</Link>
+              <Link to="/services/" className="ga-menu">
+                Pro Help
+              </Link>
             </MenuItem>
             <MenuItem>
               <Link to="/community/">Community</Link>
             </MenuItem>
+
+            <MenuItem>
+              <MenuDetails>
+                <summary>Resources</summary>
+
+                <MenuList>
+                  <MenuItem>
+                    <Link to="/plugins">Plugins</Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to="/themes">Themes</Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to="/config-builder">ConfigBuilder</Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link to="/showcases">Showcases</Link>
+                  </MenuItem>
+                </MenuList>
+              </MenuDetails>
+            </MenuItem>
+
             <MenuItem>
               <Link to="/blog/">Blog</Link>
             </MenuItem>
-            <MenuItem css={css`
-              height: 28px;
-            `}>
-              <a href="https://github.com/decaporg/decap-cms" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <MenuItem
+              css={css`
+                height: 28px;
+              `}
+            >
+              <a
+                href="https://github.com/decaporg/decap-cms"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
                 <SiGithub size={28} />
               </a>
             </MenuItem>

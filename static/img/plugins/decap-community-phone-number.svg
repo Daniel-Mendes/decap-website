@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2" viewBox="0 0 100 100">
+  <defs>
+    <path id="reuse-0" d="M125 15h100v100H125z" style="fill:none"></path>
+      <path id="reuse-1" d="m35.9 24.277 7.729 11.832c.749 1.191.572 3.322.226 4.046-.555 1.161-2.091 3.982-2.69 5.077a4.823 4.823 0 0 0-.41 1.017c-.507 1.742-1.177 3.178 7.63 12.16l-6.655 7.13S28.841 53.525 24.449 38.067c-1.08-3.801-2.236-10.029 5.24-13.58 2.29-1.088 4.815-2.445 6.211-.21Z" style="fill:#fff"></path>
+  </defs>
+    <g transform="translate(-125 -15)">
+    <use xlink:href="#reuse-0" style="fill:none"></use>
+        <clipPath id="a">
+      <use xlink:href="#reuse-0"></use>
+    </clipPath>
+        <g clip-path="url(#a)">
+      <path d="M161 120.516C161 108.641 151.472 99 139.737 99H98.263C86.528 99 77 108.641 77 120.516v41.968C77 174.359 86.528 184 98.263 184h41.474c11.735 0 21.263-9.641 21.263-21.516v-41.968Z" style="fill:#2b6bd3" transform="matrix(1.19048 0 0 1.17647 33.333 -101.471)"></path>
+            <use xlink:href="#reuse-1" style="fill:#fff" transform="matrix(.66603 0 0 .66599 139.242 29.634)"></use>
+            <use xlink:href="#reuse-1" style="fill:#fff" transform="matrix(0 -.66599 -.66603 0 210.367 100.757)"></use>
+    </g>
+  </g>
+</svg>
