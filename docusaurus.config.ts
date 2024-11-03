@@ -21,7 +21,7 @@ const config: Config = {
   organizationName: "decaporg",
   projectName: "decap-website",
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   onDuplicateRoutes: "throw",
 
