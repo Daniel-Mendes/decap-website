@@ -1,0 +1,59 @@
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+
+  padding: 0.5rem;
+
+  border: 1px solid var(--ifm-color-content-secondary);
+  border-radius: 10px;
+
+  &.sm {
+    padding: 0.25rem;
+  }
+}
+
+.secondary.iconWrap {
+  border-color: var(--ifm-color-gray-300);
+}
+
+.primary.iconWrap {
+  border-color: var(--ifm-color-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(from var(--ifm-color-primary) r g b / 0.25),
+    transparent
+  );
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.secondary.icon {
+  filter: invert(33%) sepia(16%) saturate(320%) hue-rotate(175deg)
+    brightness(92%) contrast(84%);
+}
+
+.primary.icon {
+  filter: invert(15%) sepia(85%) saturate(5653%) hue-rotate(324deg)
+    brightness(106%) contrast(109%);
+}
+
+.sm.iconWrap {
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.sm.icon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+[data-theme="dark"] {
+  .secondary.iconWrap {
+    border-color: var(--ifm-color-emphasis-300);
+  }
+}

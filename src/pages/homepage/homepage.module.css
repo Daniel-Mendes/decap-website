@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem 0;
+  padding: 8rem 0;
+}
+
+.keyFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+
+  section:nth-child(even) > div {
+    flex-direction: row-reverse;
+  }
+}

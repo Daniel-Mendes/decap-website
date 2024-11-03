@@ -1,0 +1,18 @@
+.theme-back-to-top-button {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .pagination-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ifm-spacing-vertical);
+  }
+}
+
+.pagination-nav__link--prev .pagination-nav__label::before {
+  content: "";
+}
+.pagination-nav__link--next .pagination-nav__label::after {
+  content: "";
+}

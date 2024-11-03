@@ -1,0 +1,37 @@
+{
+  "title": "Decap Templates",
+  "headline": "Decap <em>Templates</em>",
+  "subhead": "Get started with Decap CMS by using one of our templates.",
+  "templates": [
+    {
+      "title": "Creating a blog with Middleman and Decap CMS",
+      "type": "Tutorial",
+      "tools": ["Middleman"],
+      "links": {
+        "demo_url": "https://briandouglas.me/",
+        "source_url": "https://github.com/bdougie/blog",
+        "docs_url": "https://www.netlify.com/blog/2017/04/20/creating-a-blog-with-middleman-and-netlify-cms/"
+      }
+    },
+    {
+      "title": "How to use Gatsby with Decap CMS",
+      "type": "Demo",
+      "image": "/img/templates/gatsby-demo.png",
+      "tools": ["Gatsby"],
+      "links": {
+        "demo_url": "https://gatsby-netlify-cms-example.netlify.app/",
+        "source_url": "https://github.com/robertcoopercode/gatsby-netlify-cms",
+        "docs_url": "https://blog.logrocket.com/how-to-use-gatsby-netlify-cms/"
+      }
+    },
+    {
+      "title": "Next.js 14 Blog Starter",
+      "type": "Starter",
+      "image": "/img/templates/nextdotjs-starter.png",
+      "tools": ["Next.js 14", "Tailwind CSS", "ContentLayer"],
+      "links": {
+        "source_url": "https://github.com/ositaka/nextjs-blog-tailwind-starter"
+      }
+    }
+  ]
+}

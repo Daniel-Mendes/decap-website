@@ -1,0 +1,19 @@
+/* .table-of-contents__link--active {
+  display: flex;
+  align-items: center;
+}
+
+.table-of-contents__link::before {
+  --width: 1px;
+
+  content: "";
+  display: inline-block;
+  width: var(--width);
+  height: 1rem;
+  position: relative;
+  left: calc(var(--ifm-toc-padding-horizontal) * -2 - (var(--width) / 2));
+}
+
+.table-of-contents__link--active::before {
+  border-left: var(--width) solid var(--ifm-color-primary);
+} */

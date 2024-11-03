@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+
+/docs /docs/getting-started/ 301!
+/docs/getting-started /docs/getting-started/introduction 301!
+/chat https://discord.gg/KZRDXmTm9v 301!

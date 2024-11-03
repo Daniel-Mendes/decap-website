@@ -1,0 +1,29 @@
+.theme-doc-sidebar-container {
+  .menu {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+.menu__link {
+  padding-right: 0;
+}
+
+.menu__list-item {
+  .menu__caret {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    padding: 0 0;
+  }
+
+  .menu__caret::before,
+  .menu__link--sublist::after {
+    min-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url("/icons/chevron-up.svg") no-repeat;
+    background-position: center center;
+  }
+}

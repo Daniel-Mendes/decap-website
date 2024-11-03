@@ -1,0 +1,25 @@
+.button--primary {
+  color: var(--ifm-color-white);
+
+  &:hover {
+    color: var(--ifm-color-white);
+    background-color: var(--ifm-color-primary-lightest);
+  }
+}
+
+.button--primary.button--outline {
+  color: var(--ifm-color-primary);
+  background-color: hsla(330, 100%, 65%, 0.1);
+
+  &:hover {
+    background-color: hsla(330, 100%, 65%, 0.25);
+  }
+}
+
+.rounded--pill.button {
+  border-radius: 9999px;
+}
+
+.menu__link--active.button {
+  background-color: var(--ifm-color-primary-lightest);
+}

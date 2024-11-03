@@ -1,0 +1,410 @@
+# when using the default proxy server port (for local dev)
+# local_backend: true
+
+backend:
+  name: github
+  branch: migrate-to-docusaurus
+  repo: Daniel-Mendes/decap-website
+
+locale: en
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: docs
+    label: Docs
+    label_singular: Doc
+    folder: docs
+    create: true
+    nested:
+      depth: 10
+      summary: "{{title}}"
+    fields:
+      - label: Sidebar position
+        name: sidebar_position
+        widget: number
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+      - label: Image
+        name: image
+        widget: "image"
+        allow_multiple: false
+      - label: Body
+        name: body
+        widget: markdown
+    sortable_fields: ["title", "sidebar_position"]
+    extension: md
+    format: frontmatter
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
+
+  - name: settings
+    label: Settings
+    files:
+      - label: "Blog settings"
+        name: blog
+        file: "_data/blog.yml"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: false,
+            }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "string" }
+          - { label: "Default Author", name: default_author, widget: string }
+
+      - label: "Changelog settings"
+        name: "changelog"
+        file: "_data/changelog.yml"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: false,
+            }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "string" }
+          - { label: "Default Author", name: default_author, widget: string }
+
+      - label: Authors
+        name: authors
+        file: "_data/authors.yml"
+        fields:
+          - name: authors
+            label: Authors
+            label_singular: "Author"
+            widget: list
+            fields:
+              - {
+                  label: "Name",
+                  name: "name",
+                  widget: "string",
+                  hint: "First and Last",
+                }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Image URL", name: "image_url", widget: "string" }
+              - { label: "Page", name: "page", widget: "boolean" }
+
+  - label: "Pages"
+    name: "pages"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "src/pages/homepage/homepage.content.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subhead", name: "subhead", widget: "string" }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "URL",
+                        name: "src",
+                        widget: "image",
+                        media_folder: "/static/img/hero",
+                        public_folder: "/img/hero",
+                      },
+                      {
+                        label: "Alternative Text",
+                        name: "alt",
+                        widget: "string",
+                      },
+                    ],
+                }
+              - label: "Actions"
+                label_singular: "Action"
+                name: "actions"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - {
+                      label: "Variant",
+                      name: "variant",
+                      widget: "select",
+                      options: ["primary", "secondary"],
+                    }
+                  - {
+                      label: "Outlined",
+                      name: "outline",
+                      widget: "boolean",
+                      default: false,
+                    }
+
+          - label: "SSG List"
+            name: "ssgList"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Tools",
+                  label_singular: "Tool",
+                  name: "tools",
+                  widget: "list",
+                  field:
+                    {
+                      widget: "image",
+                      name: "image",
+                      media_folder: "/static/icons/brands/monochrome",
+                      public_folder: "/icons/brands/monochrome",
+                    },
+                }
+
+          - label: "Key Features"
+            label_singular: "Key Feature"
+            name: "keyFeatures"
+            widget: "list"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "/static/img/keyFeatures"
+                public_folder: "/img/keyFeatures"
+              - label: "Features"
+                label_singular: "Feature"
+                name: "features"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "image",
+                      media_folder: "/static/icons",
+                      public_folder: "/icons",
+                    }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+
+          - label: "Functionalities"
+            name: "functionalities"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - label: "Features"
+                label_singular: "Feature"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "image",
+                      media_folder: "/static/icons",
+                      public_folder: "/icons",
+                    }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+                  - {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      required: false,
+                    }
+
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Action"
+                name: "action"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+
+      - name: "community"
+        label: "Community"
+        file: "src/pages/community/community.content.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "string" }
+          - label: "Sections"
+            label_singular: "Section"
+            name: "sections"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Channels"
+                label_singular: "Channel"
+                name: "channels"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Link",
+                      name: "link",
+                      widget: "object",
+                      fields:
+                        [
+                          { label: "URL", name: "href", widget: "string" },
+                          { label: "Text", name: "text", widget: "string" },
+                        ],
+                    }
+      - name: "templates"
+        label: "Templates"
+        file: "src/pages/templates/templates.content.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "string" }
+          - label: "Templates"
+            label_singular: "Template"
+            name: "templates"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Tools"
+                label_singular: "Tool"
+                name: "tools"
+                widget: "select"
+                multiple: true
+                options:
+                  - "Eleventy"
+                  - Tailwind CSS
+                  - "ContentLayer"
+                  - "Gatsby"
+                  - "Hugo"
+                  - "Jekyll"
+                  - "Middleman"
+                  - "Next.js"
+                  - "Nuxt.js"
+                  - "VuePress"
+              - label: "Links"
+                label_singular: "Link"
+                name: "links"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Source URL",
+                      name: "source_url",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Demo URL",
+                      name: "demo_url",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Docs URL",
+                      name: "docs_url",
+                      widget: "string",
+                      required: false,
+                    }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    identifier_field: "title"
+    extension: "md"
+    format: "frontmatter"
+    nested:
+      depth: 5
+      summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+          media_folder: ".",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "changelog"
+    label: "Changelog"
+    folder: "changelog"
+    identifier_field: "title"
+    extension: "md"
+    format: "frontmatter"
+    nested:
+      depth: 2
+      summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+          media_folder: ".",
+        }
+      - {
+          label: "Author",
+          name: "authors",
+          widget: "relation",
+          collection: "authors",
+          file: "authors",
+          search_fields: ["name"],
+          value_field: "index",
+          display_fields: ["name"],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }

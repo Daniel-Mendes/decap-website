@@ -1,0 +1,25 @@
+.card {
+  box-shadow: none;
+  border: 1px solid var(--ifm-color-emphasis-200);
+
+  transition: all var(--ifm-transition-fast) ease;
+  transition-property: border, box-shadow;
+
+  &:has(.card__footer > a:only-child) {
+    position: relative;
+  }
+
+  &:has(.card__footer > a:only-child) .card__footer > a:first-child::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+  }
+
+  &:has(.card__footer > :only-child):hover {
+    border-color: var(--ifm-color-primary);
+  }
+}
+
+[data-theme="dark"] .card {
+  border: 0;
+}

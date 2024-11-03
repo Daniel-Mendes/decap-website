@@ -1,0 +1,35 @@
+.templates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: masonry;
+  gap: var(--ifm-spacing-horizontal);
+}
+
+.templateImage {
+  border-radius: var(--ifm-global-radius);
+}
+
+.title {
+  --ifm-h2-font-size: 1.75rem;
+}
+
+.tools,
+.links {
+  display: flex;
+  gap: calc(var(--ifm-spacing-horizontal) / 2);
+  flex-wrap: wrap;
+}
+
+.tools > li {
+  flex-shrink: 0;
+}
+
+@media (max-width: 996px) {
+  .templates {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+}

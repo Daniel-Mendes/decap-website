@@ -1,0 +1,9 @@
+.menuExternalLink {
+  align-items: center;
+}
+
+.menuLinkWithBadge {
+  display: flex;
+  justify-content: space-between;
+  padding-right: var(--ifm-menu-link-padding-horizontal);
+}

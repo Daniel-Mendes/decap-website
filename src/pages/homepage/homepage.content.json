@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Open source content management for your Git workflow",
+    "description": "Decap is an open source content management for your Git workflow. Use it with any static site generator for a faster and more flexible web project."
+  },
+  "hero": {
+    "badge": {
+      "label": "Introducing Decap V4",
+      "link": "/changelog/v4.0.0"
+    },
+    "headline": "Open source content management for your <em>Git Worflow</em>",
+    "subhead": "Use Decap CMS with any static site generator for a faster and more flexible web project.",
+    "image": {
+      "src": "/img/hero/hero-desktop.png",
+      "alt": "Decap CMS Desktop Dashboard"
+    },
+    "actions": [
+      {
+        "label": "Get started with the docs",
+        "link": "/docs/getting-started/introduction",
+        "variant": "primary"
+      },
+      {
+        "label": "Try the demo",
+        "link": "https://demo.decapcms.org/",
+        "variant": "primary",
+        "outline": true
+      }
+    ]
+  },
+  "banner": {
+    "title": "Getting started is <em>simple and free.</em>",
+    "subtitle": "Choose a template that’s pre-configured with a static site generator and deploys to a global CDN in one click.",
+    "action": {
+      "label": "Start with a template",
+      "link": "/templates"
+    }
+  },
+  "ssgList": {
+    "title": "Works with any popular static site generator",
+    "tools": [
+      "/icons/brands/monochrome/astro.svg",
+      "/icons/brands/monochrome/docusaurus.svg",
+      "/icons/brands/monochrome/eleventy.svg",
+      "/icons/brands/monochrome/gatsby.svg",
+      "/icons/brands/monochrome/gridsome.svg",
+      "/icons/brands/monochrome/hugo.svg",
+      "/icons/brands/monochrome/jekyll.svg",
+      "/icons/brands/monochrome/nextdotjs.svg",
+      "/icons/brands/monochrome/nuxt.svg",
+      "/icons/brands/monochrome/svelte.svg",
+      "/icons/brands/monochrome/vuedotjs.svg"
+    ]
+  },
+  "keyFeatures": [
+    {
+      "headline": "<em>Edit</em> content like in a form",
+      "image": "/img/keyFeatures/editor.png",
+      "features": [
+        {
+          "icon": "/icons/eye.svg",
+          "title": "Content & media management",
+          "description": "See your changes in real-time with our visual editor."
+        },
+        {
+          "icon": "/icons/circle-slash.svg",
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "icon": "/icons/component.svg",
+          "title": "Custom components",
+          "description": "Add and edit content blocks built by your developers."
+        }
+      ]
+    },
+    {
+      "headline": "<em>Publish</em> content with confidence",
+      "image": "/img/keyFeatures/workflow.png",
+      "features": [
+        {
+          "icon": "/icons/app-window.svg",
+          "title": "Live Preview",
+          "description": "See your changes in real-time with our visual editor."
+        },
+        {
+          "icon": "/icons/link.svg",
+          "title": "Preview Links",
+          "description": "Share preview URLs to anyone with live updates."
+        },
+        {
+          "icon": "/icons/list-todo.svg",
+          "title": "Draft & review",
+          "description": "Review all your changes before publishing."
+        }
+      ]
+    },
+    {
+      "headline": "<em>Customize</em> the editing experience",
+      "image": "/img/keyFeatures/dashboard.png",
+      "features": [
+        {
+          "icon": "/icons/circle-slash.svg",
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "icon": "/icons/images.svg",
+          "title": "Media library",
+          "description": "Manage and upload images, videos, and documents."
+        },
+        {
+          "icon": "/icons/circle-slash.svg",
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    },
+    {
+      "headline": "<em>Own</em> your content forever",
+      "image": "/img/keyFeatures/content.png",
+      "features": [
+        {
+          "icon": "/icons/database.svg",
+          "title": "No database management",
+          "description": "Keep your content in your Git repository."
+        },
+        {
+          "icon": "/icons/history.svg",
+          "title": "Version history",
+          "description": "With the power of Git, track your changes and revert changes if needed."
+        },
+        {
+          "icon": "/icons/circle-slash.svg",
+          "title": "Lorem ipsum dolor sit amet",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      ]
+    }
+  ],
+  "functionalities": {
+    "headline": "Packed with more features <em>for you</em>",
+    "items": [
+      {
+        "icon": "/icons/settings.svg",
+        "title": "Configurable",
+        "description": "Customize content types, views, search, and more."
+      },
+      {
+        "icon": "/icons/list-todo.svg",
+        "title": "Draft system",
+        "description": "Manage content from draft to review to publish.",
+        "link": "/docs/workflow/editorial-workflows"
+      },
+      {
+        "icon": "/icons/app-window.svg",
+        "title": "Templates",
+        "description": "Start with one of our templates for a quick start."
+      },
+      {
+        "icon": "/icons/tablet-smartphone.svg",
+        "title": "Mobile ready",
+        "description": "Update your website from any device."
+      },
+      {
+        "icon": "/icons/pencil.svg",
+        "title": "Visual editor",
+        "description": "Rich-text, markdown editor powered by Plate."
+      },
+      {
+        "icon": "/icons/folder-tree.svg",
+        "title": "Media manager",
+        "description": "Drag and drop uploads, multi-file selection, and more.",
+        "link": "/docs/category/assets"
+      },
+      {
+        "icon": "/icons/chart-column-increasing.svg",
+        "title": "Analytics",
+        "description": "Integrate with GA, Fathom, Plausible, and more."
+      },
+      {
+        "icon": "/icons/languages.svg",
+        "title": "Localization",
+        "description": "Support content in multiple languages.",
+        "link": "/docs/localization"
+      },
+      {
+        "icon": "/icons/handshake.svg",
+        "title": "Community",
+        "description": "Join our community, give feedback and ask for new features.",
+        "link": "/community"
+      }
+    ]
+  }
+}
