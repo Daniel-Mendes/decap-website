@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  branch: migrate-to-docusaurus
+  branch: refactor/migrate-to-docusaurus
   repo: Daniel-Mendes/decap-website
 
 locale: en
