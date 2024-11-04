@@ -1,5 +1,7 @@
 ---
 title: Bitbucket
+sidebar_custom_props:
+  icon: /icons/brands/bitbucket.svg
 ---
 
 For repositories stored on [Bitbucket](https://bitbucket.org), the `bitbucket` backend allows CMS users to log in directly with their Bitbucket account. Note that all users must have write access to your content repository for this to work.

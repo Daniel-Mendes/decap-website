@@ -1,5 +1,7 @@
 ---
 title: String
+sidebar_custom_props:
+  icon: /icons/text-cursor-input.svg
 ---
 
 The string widget translates a basic text input to a string value. For larger textarea inputs, use the text widget.

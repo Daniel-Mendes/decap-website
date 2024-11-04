@@ -1,5 +1,7 @@
 ---
 title: Text
+sidebar_custom_props:
+  icon: /icons/letter-text.svg
 ---
 
 The text widget takes a multiline text field and saves it as a string. For shorter text inputs, use the string widget.

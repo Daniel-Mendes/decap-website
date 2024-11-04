@@ -1,5 +1,7 @@
 ---
 title: Object
+sidebar_custom_props:
+  icon: /icons/braces.svg
 ---
 
 The object widget allows you to group multiple widgets together, nested under a single field. You can choose any widget as a child of an object widget—even other objects.

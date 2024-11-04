@@ -1,5 +1,7 @@
 ---
 title: Boolean
+sidebar_custom_props:
+  icon: /icons/toggle-left.svg
 ---
 
 The boolean widget translates a toggle switch input to a true/false value.

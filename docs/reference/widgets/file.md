@@ -1,5 +1,7 @@
 ---
 title: File
+sidebar_custom_props:
+  icon: /icons/file.svg
 ---
 
 The file widget allows editors to upload a file or select an existing one from the media library. The path to the file will be saved to the field as a string.

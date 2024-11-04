@@ -1,5 +1,7 @@
 ---
 title: DateTime
+sidebar_custom_props:
+  icon: /icons/calendar-clock.svg
 ---
 
 The datetime widget translates a datetime picker to a datetime string.

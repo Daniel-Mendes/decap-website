@@ -1,5 +1,7 @@
 ---
 title: Markdown
+sidebar_custom_props:
+  icon: /icons/heading-1.svg
 ---
 
 The markdown widget provides a full fledged text editor allowing users to format text with features such as headings and blockquotes. Users can change their editing view with a handy toggle button.

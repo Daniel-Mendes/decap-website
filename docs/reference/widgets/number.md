@@ -1,5 +1,7 @@
 ---
 title: Number
+sidebar_custom_props:
+  icon: /icons/arrow-up-1-0.svg
 ---
 
 The number widget uses an HTML number input, saving the value as a string, integer, or floating point number.

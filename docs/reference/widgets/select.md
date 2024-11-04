@@ -1,5 +1,7 @@
 ---
 title: Select
+sidebar_custom_props:
+  icon: /icons/square-mouse-pointer.svg
 ---
 
 The select widget allows you to pick a string value from a dropdown menu.

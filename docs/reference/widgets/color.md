@@ -1,5 +1,7 @@
 ---
 title: Color
+sidebar_custom_props:
+  icon: /icons/pipette.svg
 ---
 
 The color widget translates a color picker to a color string.
