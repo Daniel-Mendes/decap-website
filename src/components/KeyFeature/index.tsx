@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ThemedImage from "@theme/ThemedImage";
 
 import ContentIcon from "../ContentIcon/ContentIcon";
 import styles from "./KeyFeature.module.css";
@@ -13,12 +14,19 @@ type Feature = {
 type KeyFeatureProps = {
   headline: string;
   image: string;
+  images: {
+    sources: {
+      light: string;
+      dark: string;
+    };
+  };
   features: Feature[];
 };
 
 export default function KeyFeature({
   headline,
   image,
+  images,
   features,
 }: KeyFeatureProps) {
   const [activeFeature, setActiveFeature] = useState<number>(0);
@@ -56,7 +64,11 @@ export default function KeyFeature({
           </ul>
         </div>
         <div className="col">
-          <img src={image} className={styles.image} />
+          {images ? (
+            <ThemedImage sources={images.sources} className={styles.image} />
+          ) : (
+            <img src={image} className={styles.image} />
+          )}
         </div>
       </div>
     </section>

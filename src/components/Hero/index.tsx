@@ -1,11 +1,40 @@
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
+import ThemedImage from "@theme/ThemedImage";
 import ExternalLinkIcon from "@theme/Icon/ExternalLink";
 
 import styles from "./Hero.module.css";
 import clsx from "clsx";
 
-export default function Hero({ badge, headline, description, image, actions }) {
+type Props = {
+  badge: {
+    label: string;
+    link: string;
+  };
+  headline: string;
+  description: string;
+  images: {
+    sources: {
+      light: string;
+      dark: string;
+    };
+    alt: string;
+  };
+  actions: {
+    label: string;
+    link: string;
+    variant: "primary" | "secondary";
+    outline?: boolean;
+  }[];
+};
+
+export default function Hero({
+  badge,
+  headline,
+  description,
+  images,
+  actions,
+}: Props) {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
@@ -44,7 +73,7 @@ export default function Hero({ badge, headline, description, image, actions }) {
         </div>
 
         <div className={styles.heroImage}>
-          <img src={image.src} alt={image.alt} />
+          <ThemedImage sources={images.sources} alt={images.alt} />
         </div>
       </div>
     </header>

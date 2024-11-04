@@ -10,8 +10,11 @@
     },
     "headline": "Open source content management for your <em>Git Worflow</em>",
     "subhead": "Use Decap CMS with any static site generator for a faster and more flexible web project.",
-    "image": {
-      "src": "/img/hero/hero-desktop.png",
+    "images": {
+      "sources": {
+        "light": "/img/hero/hero-desktop.png",
+        "dark": "/img/hero/hero-desktop-dark.png"
+      },
       "alt": "Decap CMS Desktop Dashboard"
     },
     "actions": [
@@ -55,7 +58,12 @@
   "keyFeatures": [
     {
       "headline": "<em>Edit</em> content like in a form",
-      "image": "/img/keyFeatures/editor.png",
+      "images": {
+        "sources": {
+          "light": "/img/keyFeatures/editor.png",
+          "dark": "/img/keyFeatures/editor-dark.png"
+        }
+      },
       "features": [
         {
           "icon": "/icons/eye.svg",
@@ -76,7 +84,12 @@
     },
     {
       "headline": "<em>Publish</em> content with confidence",
-      "image": "/img/keyFeatures/workflow.png",
+      "images": {
+        "sources": {
+          "light": "/img/keyFeatures/workflow.png",
+          "dark": "/img/keyFeatures/workflow-dark.png"
+        }
+      },
       "features": [
         {
           "icon": "/icons/app-window.svg",
