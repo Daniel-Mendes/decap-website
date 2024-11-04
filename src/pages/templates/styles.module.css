@@ -16,12 +16,17 @@
 .tools,
 .links {
   display: flex;
-  gap: calc(var(--ifm-spacing-horizontal) / 2);
+  gap: calc(var(--ifm-spacing-horizontal));
   flex-wrap: wrap;
 }
 
 .tools > li {
   flex-shrink: 0;
+}
+
+.links > a {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 996px) {
