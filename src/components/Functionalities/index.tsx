@@ -30,19 +30,22 @@ export default function Functionalities({
           />
 
           <ul className={styles.list}>
-            {items.map((item, index) => (
-              <li key={index} className={styles.item}>
-                <a href={item.link} className={styles.link}>
-                  <ContentIcon src={item.icon} variant="primary" />
-                  <div>
-                    <Heading as="h3" className={styles.title}>
-                      {item.title}
-                    </Heading>
-                    <p className={styles.description}>{item.description}</p>
-                  </div>
-                </a>
-              </li>
-            ))}
+            {items.map((item, index) => {
+              const Wrapper = item.link ? "a" : "div";
+              return (
+                <li key={index} className={styles.item}>
+                  <Wrapper href={item.link} className={styles.link}>
+                    <ContentIcon src={item.icon} variant="primary" />
+                    <div>
+                      <Heading as="h3" className={styles.title}>
+                        {item.title}
+                      </Heading>
+                      <p className={styles.description}>{item.description}</p>
+                    </div>
+                  </Wrapper>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
