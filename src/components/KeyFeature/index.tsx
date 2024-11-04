@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ThemedImage from "@theme/ThemedImage";
 
 import ContentIcon from "../ContentIcon/ContentIcon";
@@ -29,8 +28,6 @@ export default function KeyFeature({
   images,
   features,
 }: KeyFeatureProps) {
-  const [activeFeature, setActiveFeature] = useState<number>(0);
-
   return (
     <section className="container">
       <div className={clsx("row", styles.container)}>
@@ -41,24 +38,13 @@ export default function KeyFeature({
           />
           <ul className={styles.features}>
             {features.map((feature, index) => (
-              <li key={feature.title}>
-                <button
-                  onClick={() => setActiveFeature(index)}
-                  className={clsx("clean-btn", styles.feature, {
-                    [styles.active]: activeFeature === index,
-                  })}
-                >
-                  <ContentIcon
-                    src={feature.icon}
-                    size="sm"
-                    variant={activeFeature === index ? "primary" : "secondary"}
-                  />
+              <li key={index} className={styles.feature}>
+                <ContentIcon src={feature.icon} size="sm" variant="primary" />
 
-                  <div className={styles.featureBody}>
-                    <h3 className={styles.title}>{feature.title}</h3>
-                    <p className={styles.description}>{feature.description}</p>
-                  </div>
-                </button>
+                <div className={styles.featureBody}>
+                  <h3 className={styles.title}>{feature.title}</h3>
+                  <p className={styles.description}>{feature.description}</p>
+                </div>
               </li>
             ))}
           </ul>
