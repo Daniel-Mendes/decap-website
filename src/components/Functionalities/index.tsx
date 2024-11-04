@@ -1,4 +1,5 @@
 import Heading from "@theme/Heading";
+import clsx from "clsx";
 
 import styles from "./Functionalities.module.css";
 import ContentIcon from "../ContentIcon/ContentIcon";
@@ -8,6 +9,7 @@ type Functionalities = {
   title: string;
   description: string;
   link: string;
+  badge: string;
 };
 
 type FunctionalitiesProps = {
@@ -35,7 +37,20 @@ export default function Functionalities({
               return (
                 <li key={index} className={styles.item}>
                   <Wrapper href={item.link} className={styles.link}>
-                    <ContentIcon src={item.icon} variant="primary" />
+                    <div className={styles.itemHeader}>
+                      <ContentIcon src={item.icon} variant="primary" />
+
+                      {item.badge && (
+                        <span
+                          className={clsx(
+                            "badge badge--secondary rounded--pill"
+                          )}
+                        >
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+
                     <div>
                       <Heading as="h3" className={styles.title}>
                         {item.title}

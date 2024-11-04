@@ -1,0 +1,11 @@
+.rounded--pill.badge {
+  border-radius: 9999px;
+}
+
+[data-theme="dark"] {
+  .badge--secondary {
+    --ifm-badge-background-color: var(--ifm-color-gray-800);
+    --ifm-badge-border-color: var(--ifm-badge-background-color);
+    color: var(--ifm-color-content-primary);
+  }
+}

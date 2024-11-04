@@ -175,7 +175,8 @@
       {
         "icon": "/icons/tablet-smartphone.svg",
         "title": "Mobile ready",
-        "description": "Update your website from any device."
+        "description": "Update your website from any device.",
+        "badge": "Coming soon"
       },
       {
         "icon": "/icons/pencil.svg",
@@ -191,7 +192,8 @@
       {
         "icon": "/icons/chart-column-increasing.svg",
         "title": "Analytics",
-        "description": "Integrate with GA, Fathom, Plausible, and more."
+        "description": "Integrate with GA, Fathom, Plausible, and more.",
+        "badge": "Coming soon"
       },
       {
         "icon": "/icons/languages.svg",

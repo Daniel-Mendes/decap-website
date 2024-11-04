@@ -37,6 +37,12 @@
     box-shadow: 0 0 0 2px var(--ifm-color-primary);
   }
 
+  .itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .title {
     --ifm-h3-font-size: 1rem;
 
