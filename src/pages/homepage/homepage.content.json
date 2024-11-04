@@ -157,7 +157,8 @@
       {
         "icon": "/icons/settings.svg",
         "title": "Configurable",
-        "description": "Customize content types, views, search, and more."
+        "description": "Customize content types, views, search, and more.",
+        "link": "/docs/reference/configuration"
       },
       {
         "icon": "/icons/list-todo.svg",
@@ -168,7 +169,8 @@
       {
         "icon": "/icons/app-window.svg",
         "title": "Templates",
-        "description": "Start with one of our templates for a quick start."
+        "description": "Start with one of our templates for a quick start.",
+        "link": "/templates"
       },
       {
         "icon": "/icons/tablet-smartphone.svg",
@@ -195,7 +197,7 @@
         "icon": "/icons/languages.svg",
         "title": "Localization",
         "description": "Support content in multiple languages.",
-        "link": "/docs/localization"
+        "link": "/docs/reference/internationalization"
       },
       {
         "icon": "/icons/handshake.svg",
