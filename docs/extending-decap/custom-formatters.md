@@ -1,5 +1,5 @@
 ---
-title: Custom formatters
+title: Custom Formatters
 ---
 
 To manage content with other file formats than the built in ones, you can register a custom formatter:

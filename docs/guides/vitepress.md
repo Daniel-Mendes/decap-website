@@ -105,8 +105,7 @@ npm install --save-dev vite-plugin-decap-cms
 
 Instead of adding files to `/admin/`, you need to add the plugin to your Vite configuration and specify the Decap configuration in the plugin options.
 
-```ts
-// vite.config.ts
+```ts title="vite.config.ts"
 import { defineConfig } from "vite";
 import decap, {
   createFolderCollection,

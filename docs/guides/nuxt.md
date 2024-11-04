@@ -244,15 +244,13 @@ export default {
 
 Since Nuxt 2.13+, nuxt export has a crawler feature integrated which will crawl all your links and generate your routes based on those links. Therefore you do not need to do anything in order for your dynamic routes to be crawled. i.e, if you are on version of nuxt above 2.14 add target as static in nuxt.config.js and use `nuxt generate` to build your static site.
 
-```javascript
-// nuxt.config.js
+```javascript title="nuxt.config.js"
 target: "static";
 ```
 
 If you are using **nuxt version below 2.14** you have to use generate option in nuxt/content module to generate pages
 
-```javascript
-//nuxt.config.js
+```javascript title="nuxt.config.js"
 export default {
   modules: [, "@nuxt/content"],
   generate: {

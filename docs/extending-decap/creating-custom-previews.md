@@ -25,17 +25,14 @@ CMS.registerPreviewStyle(file);
 
 **Example:**
 
-```html
-// index.html
+```html title="index.html"
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 <script>
   CMS.registerPreviewStyle("/example.css");
 </script>
 ```
 
-```css
-/* example.css */
-
+```css title="example.css"
 html,
 body {
   color: #444;
