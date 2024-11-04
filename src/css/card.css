@@ -3,7 +3,6 @@
   border: 1px solid var(--ifm-color-emphasis-200);
 
   transition: all var(--ifm-transition-fast) ease;
-  transition-property: border, box-shadow;
 
   &:has(.card__footer > a:only-child) {
     position: relative;
@@ -17,9 +16,16 @@
 
   &:has(.card__footer > :only-child):hover {
     border-color: var(--ifm-color-primary);
+    background-color: var(--ifm-color-secondary);
   }
 }
 
-[data-theme="dark"] .card {
-  border: 0;
+[data-theme="dark"] {
+  .card {
+    background: none;
+  }
+
+  .card:has(.card__footer > :only-child):hover {
+    background-color: var(--ifm-card-background-color);
+  }
 }

@@ -10,6 +10,21 @@
   }
 }
 
+.pagination-nav__link {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all var(--ifm-transition-fast) ease;
+
+  &:hover {
+    background-color: var(--ifm-color-secondary);
+  }
+}
+
+[data-theme="dark"] {
+  .pagination-nav__link:hover {
+    background-color: var(--ifm-card-background-color);
+  }
+}
+
 .pagination-nav__link--prev .pagination-nav__label::before {
   content: "";
 }
