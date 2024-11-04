@@ -12,21 +12,23 @@
   &::after {
     content: "";
     position: absolute;
-    width: calc(100% - var(--ifm-spacing-horizontal) * 2);
-    height: 100%;
     top: 50%;
     left: 50%;
+    translate: -50% -50%;
+    width: calc(100% - var(--ifm-spacing-horizontal) * 2);
+    height: 100%;
     border: 1px solid var(--ifm-color-primary-light);
     border-radius: var(--ifm-global-radius);
     filter: blur(1px);
     z-index: -1;
-    transform: rotate(-2.445deg);
-    translate: -50% -50%;
+  }
+
+  &::before {
+    rotate: -2.445deg;
   }
 
   &::after {
-    transform: rotate(2.445deg);
-    border-radius: var(--ifm-global-radius);
+    rotate: 2.445deg;
   }
 }
 
