@@ -23,6 +23,12 @@
   }
 }
 
+.navbar-sidebar__back {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .navbar-sidebar__backdrop {
   background-color: transparent;
   backdrop-filter: blur(0.625rem);
