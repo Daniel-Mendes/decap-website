@@ -3,9 +3,9 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
-
 import Header from "@site/src/components/Header/Header";
-import content from "./community.content.json";
+
+import content from "../../content/community.json";
 import styles from "./styles.module.css";
 
 export default function Community() {

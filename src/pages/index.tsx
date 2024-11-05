@@ -5,8 +5,8 @@ import Functionalities from "@site/src/components/Functionalities";
 import SSGList from "@site/src/components/SSGList";
 import KeyFeature from "@site/src/components/KeyFeature";
 
-import styles from "./homepage/homepage.module.css";
-import content from "./homepage/homepage.content.json";
+import styles from "./index.module.css";
+import content from "../content/homepage.json";
 
 export default function Home(): JSX.Element {
   return (

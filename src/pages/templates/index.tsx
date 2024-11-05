@@ -3,11 +3,11 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
+import Header from "@site/src/components/Header/Header";
 import IconExternalLink from "@theme/Icon/ExternalLink";
 
-import content from "./templates.content.json";
+import content from "../../content/templates.json";
 import styles from "./styles.module.css";
-import Header from "@site/src/components/Header/Header";
 
 type TemplateCardProps = {
   title: string;

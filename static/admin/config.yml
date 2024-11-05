@@ -1,6 +1,3 @@
-# when using the default proxy server port (for local dev)
-# local_backend: true
-
 backend:
   name: github
   branch: refactor/migrate-to-docusaurus
@@ -101,7 +98,7 @@ collections:
     files:
       - name: "homepage"
         label: "Homepage"
-        file: "src/pages/homepage/homepage.content.json"
+        file: "src/content/homepage.json"
         fields:
           - label: "Hero Section"
             name: "hero"
@@ -243,7 +240,7 @@ collections:
 
       - name: "community"
         label: "Community"
-        file: "src/pages/community/community.content.json"
+        file: "src/content/community.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Headline", name: "headline", widget: "string" }
@@ -279,7 +276,7 @@ collections:
                     }
       - name: "templates"
         label: "Templates"
-        file: "src/pages/templates/templates.content.json"
+        file: "src/content/templates.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Headline", name: "headline", widget: "string" }
