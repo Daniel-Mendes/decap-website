@@ -49,7 +49,7 @@ const config: Config = {
         blog: {
           blogTitle: blog.headline,
           blogDescription: blog.subhead,
-          showReadingTime: true,
+          showReadingTime: false,
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
@@ -79,6 +79,7 @@ const config: Config = {
         blogDescription: changelog.subhead,
         blogSidebarCount: 0,
         blogSidebarTitle: "All posts",
+        showReadingTime: false,
         authorsMapPath: "../_data/authors.json",
         onUntruncatedBlogPosts: "ignore",
       },
