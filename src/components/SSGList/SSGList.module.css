@@ -3,7 +3,18 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-720px);
+    --ssgList-width: 870px;
+    --ssgList-item-width: 50px;
+    --ssgList-gap: 1rem;
+
+    transform: translateX(
+      calc(
+        (
+            var(--ssgList-width) + (var(--ssgList-item-width) / 2) +
+              (var(--ssgList-gap) / 2)
+          ) * -1
+      )
+    );
   }
 }
 
