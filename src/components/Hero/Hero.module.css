@@ -34,6 +34,18 @@
   }
 }
 
+.heroBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.325rem;
+
+  font-size: 0.75rem;
+}
+
+[data-theme="dark"] .heroBadge {
+  color: var(--ifm-color-emphasis-700) !important;
+}
+
 .heroTitle {
   font-size: 4rem;
   text-wrap: balance;

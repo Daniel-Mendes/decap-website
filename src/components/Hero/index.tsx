@@ -1,10 +1,11 @@
+import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
+import { ArrowRight } from "lucide-react";
 import ThemedImage from "@theme/ThemedImage";
 import ExternalLinkIcon from "@theme/Icon/ExternalLink";
 
 import styles from "./Hero.module.css";
-import clsx from "clsx";
 
 type Props = {
   badge: {
@@ -41,10 +42,13 @@ export default function Hero({
         <div className={styles.heroContent}>
           {badge && (
             <a
-              className="button button--primary button--outline rounded--pill button--sm"
+              className={clsx(
+                "button button--primary button--outline rounded--pill button--sm",
+                styles.heroBadge
+              )}
               href={badge.link}
             >
-              {badge.label}
+              {badge.label} <ArrowRight size={16} />
             </a>
           )}
 
