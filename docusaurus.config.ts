@@ -21,8 +21,9 @@ const config: Config = {
   organizationName: "decaporg",
   projectName: "decap-website",
 
-  onBrokenLinks: "warn",
+  onBrokenLinks: "warn", // TODO: Change to "throw" when all links are migrated
   onBrokenMarkdownLinks: "warn",
+  onBrokenAnchors: "warn",
   onDuplicateRoutes: "throw",
 
   future: {
